@@ -43,7 +43,8 @@ namespace Selenium_Quiz2
         By Acc_created = By.XPath("//*[@id=\"form\"]/div/div/div/h2/b");
         By Continue_btn = By.XPath("//*[@id=\"form\"]/div/div/div/div/a");
         By Username = By.XPath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b");
-        public void RegisterUser()
+        
+        public void ClickSignUp_Btn()
         {
             url_function();
             log.Info("Url is Open Successfully");
@@ -58,8 +59,12 @@ namespace Selenium_Quiz2
             string Actual_result = signup_verify.Text;
             Assert.AreEqual("New User Signup!", Actual_result);
             type(name, "Humayun Mushtaq");
-            type(Email, "hmushtaq.inbox8@gmail.com");
+            type(Email, "hmushtaq.inbox15@gmail.com");
             bs1.click(Signup_btn);
+        }
+        public void RegisterUser()
+        {
+            ClickSignUp_Btn();
             /*var Ac_verify = driver.FindElement(Enter_ac_info);
             string Actual_result1 = Ac_verify.Text;
             //Assert.AreEqual("New User Signup!", Actual_result1);*/

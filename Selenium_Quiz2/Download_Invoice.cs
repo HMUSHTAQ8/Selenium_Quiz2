@@ -64,9 +64,13 @@ namespace Selenium_Quiz2
 
             var succes_verify = driver.FindElement(Success_Message);
             string Actual_result2 = succes_verify.Text;
-            Assert.AreEqual("Congratulations! Your order has been confirmed!", Actual_result);
-            click(Contin_btn);
+            Assert.AreEqual("Congratulations! Your order has been confirmed!", Actual_result2);
+            
 
+        }
+        public void verify_downloadinvoice()
+        {
+            click(Contin_btn);
         }
     }
 }

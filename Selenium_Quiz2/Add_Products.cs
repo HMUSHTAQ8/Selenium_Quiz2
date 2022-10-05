@@ -21,6 +21,9 @@ namespace Selenium_Quiz2
         By view_Cart = By.XPath("//*[@id='cartModal']/div/div/div[2]/p[2]/a");
         By Ist_product = By.XPath("//*[@id=\"product-1\"]/td[2]/h4/a");
         By Sec_product = By.XPath("//*[@id=\"product-2\"]/td[2]/h4/a");
+        By price = By.XPath("//*[@id=\"product-1\"]/td[3]/p");
+        By quantity = By.XPath("//*[@id=\"product-1\"]/td[4]/button");
+        By Total_p = By.XPath("//*[@id=\"product-1\"]/td[5]/p");
         public void Add_Product()
         {
             url_function();
@@ -40,6 +43,19 @@ namespace Selenium_Quiz2
             var element1 = driver.FindElement(Sec_product);
             string Actual_result12 = element1.Text;
             Assert.AreEqual("Men Tshirt", Actual_result12);
+
+            var price1 = driver.FindElement(price);
+            string Actual_result13 = price1.Text;
+            Assert.AreEqual("Rs. 500", Actual_result13);
+
+            var quantity1 = driver.FindElement(quantity);
+            string Actual_result14 = quantity1.Text;
+            Assert.AreEqual("1", Actual_result14);
+
+            var tp = driver.FindElement(Total_p);
+            string Actual_result15 = tp.Text;
+            Assert.AreEqual("Rs. 500", Actual_result15);    
+
 
         }
     }

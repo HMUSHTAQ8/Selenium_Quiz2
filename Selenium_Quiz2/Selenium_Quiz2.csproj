@@ -66,8 +66,14 @@
     <Compile Include="Base_Class.cs" />
     <Compile Include="Download _InvoiceTC .cs" />
     <Compile Include="Download_Invoice.cs" />
+    <Compile Include="Place _Order.cs" />
+    <Compile Include="Place _OrderTC.cs" />
     <Compile Include="Register_User.cs" />
     <Compile Include="Register_UserTC.cs" />
+    <Compile Include="Ruser_existingemail.cs" />
+    <Compile Include="Ruser_existingemail_TC.cs" />
+    <Compile Include="Scrollup_Scrolldown.cs" />
+    <Compile Include="Scrollup_ScrolldownTC.cs" />
     <Compile Include="Verify_Subscription.cs" />
     <Compile Include="Verify_SubscriptionTC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
