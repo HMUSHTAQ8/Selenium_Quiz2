@@ -1,14 +1,16 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Selenium_Quiz2;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Selenium_Quiz2
 {
-
     [TestClass]
-    public class Register_UserTC : Base_Class
+    public class Download__InvoiceTC
     {
-        Register_User Ruser = new Register_User();
+        Download_Invoice din = new Download_Invoice();
         Base_Class bc = new Base_Class();
         [TestInitialize]
         public void TestInit()
@@ -21,10 +23,10 @@ namespace Selenium_Quiz2
             //bc.driver.Close();
         }
         [TestMethod]
-        [TestCategory ("Register")]
-        public void RegisterUserWithvalidData()
+        public void downloaded_invoice()
         {
-            Ruser.RegisterUser();
+            din.download_invoice();
         }
     }
+
 }

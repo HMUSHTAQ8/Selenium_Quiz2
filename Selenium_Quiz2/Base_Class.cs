@@ -14,6 +14,8 @@ namespace Selenium_Quiz2
     public class Base_Class
     {
         public static IWebDriver driver;
+        public static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public IWebDriver SeleniumInit(string browser)
         {
             IWebDriver mydriver = null;
@@ -74,6 +76,15 @@ namespace Selenium_Quiz2
         {
             Assert.AreEqual("https://automationexercise.com/", driver.Url);
         }
+
+        public void TakeScreenShot()
+        {
+            // Taking a full-screen screenshot
+            Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+            screenshot.SaveAsFile(@"D:\Selenium_Projects\Selenium_Quiz2\Selenium_Quiz2\Reports\", ScreenshotImageFormat.Png);
+
+        }
+
 
     }
 }

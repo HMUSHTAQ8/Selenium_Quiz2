@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.DevTools;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
@@ -45,16 +46,19 @@ namespace Selenium_Quiz2
         public void RegisterUser()
         {
             url_function();
+            log.Info("Url is Open Successfully");
             Verify_Homepage_Visibility();
+            log.Info("Homepage is verify Successfully");
             //driver.Url = "http://automationexercise.com";
             //Assert.AreEqual("https://automationexercise.com/", driver.Url);
 
             bs1.click(Login_btn);
+            log.Info("lOGIN OR Signup button is clicked ");
             var signup_verify = driver.FindElement(Verifysigup);
             string Actual_result = signup_verify.Text;
             Assert.AreEqual("New User Signup!", Actual_result);
             type(name, "Humayun Mushtaq");
-            type(Email, "hmushtaq.inbox1@gmail.com");
+            type(Email, "hmushtaq.inbox8@gmail.com");
             bs1.click(Signup_btn);
             /*var Ac_verify = driver.FindElement(Enter_ac_info);
             string Actual_result1 = Ac_verify.Text;
@@ -97,10 +101,10 @@ namespace Selenium_Quiz2
             var Acc_created1 = driver.FindElement(Acc_created);
             string Actual_result3 = Acc_created1.Text;
             Assert.AreEqual("ACCOUNT CREATED!", Actual_result3);
+            //TakeScreenShot();
             click(Continue_btn);
             var value = driver.FindElement(Username);
-            string result = value.Text;
-            //string Actual_Result5= 
+            string result = value.Text; 
             Assert.AreEqual("Humayun Mushtaq", result);
         }
     }

@@ -25,6 +25,8 @@ namespace Selenium_Quiz2
             Assert.AreEqual("SUBSCRIPTION", Actual_result3);
             type(email_field, "hmushtaq.inbox@gmail.com");
             click(arrow_btn);
+            TakeScreenShot();
+            
         }
 
     }

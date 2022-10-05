@@ -1,15 +1,17 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Selenium_Quiz2;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Selenium_Quiz2
 {
-
     [TestClass]
-    public class Register_UserTC : Base_Class
+    public class Add_ProductsTC
     {
-        Register_User Ruser = new Register_User();
         Base_Class bc = new Base_Class();
+        Add_Products add=new Add_Products();
         [TestInitialize]
         public void TestInit()
         {
@@ -21,10 +23,9 @@ namespace Selenium_Quiz2
             //bc.driver.Close();
         }
         [TestMethod]
-        [TestCategory ("Register")]
-        public void RegisterUserWithvalidData()
+        public void Add_product()
         {
-            Ruser.RegisterUser();
+            add.Add_Product();
         }
     }
 }
