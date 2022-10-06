@@ -59,7 +59,7 @@ namespace Selenium_Quiz2
             string Actual_result = signup_verify.Text;
             Assert.AreEqual("New User Signup!", Actual_result);
             type(name, "Humayun Mushtaq");
-            type(Email, "hmushtaq.inbox16@gmail.com");
+            type(Email, "hmushtaq.inbox17@gmail.com");
             bs1.click(Signup_btn);
         }
         public void RegisterUser()
