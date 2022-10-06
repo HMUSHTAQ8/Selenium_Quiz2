@@ -24,6 +24,7 @@ namespace Selenium_Quiz2
         [TestCategory ("Register")]
         public void RegisterUserWithvalidData()
         {
+            url_function();
             Ruser.RegisterUser();
         }
     }

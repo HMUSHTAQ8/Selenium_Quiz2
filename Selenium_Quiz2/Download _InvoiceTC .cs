@@ -25,6 +25,7 @@ namespace Selenium_Quiz2
         [TestMethod]
         public void downloaded_invoice()
         {
+            bc.url_function();
             din.download_invoice();
         }
     }

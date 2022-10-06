@@ -14,6 +14,7 @@ namespace Selenium_Quiz2
         By already_exist = By.CssSelector("#form > div > div > div:nth-child(3) > div > form > p");
         public void Ruserwithexistingemail()
         {
+            url_function();
             ruser.ClickSignUp_Btn();
             var already_exist1 = driver.FindElement(already_exist);
             string Actual_result24 = already_exist1.Text;

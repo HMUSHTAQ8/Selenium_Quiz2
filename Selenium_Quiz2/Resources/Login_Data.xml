@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Automation>
+
+	<Execution>
+
+		<Login>
+			<name1>Humayun</name1>
+			<email>hmushtaq.inbox18@gmail.com</email>
+			<password>Humayun786</password>
+			<days>15</days>
+			<month>8</month>
+			<year>2020</year>
+			<fname>Humayun</fname>
+			<lname>Mushtaq</lname>
+			<company>Contour</company>
+			<address1>Street 8 , 54800 ,Lahore</address1>
+			<address2>Lahore</address2>
+			<country>India</country>
+			<state>Punjab</state>
+			<city>Lahore</city>
+			<postaladdress>45986</postaladdress>
+			<number>03013324144</number>
+			
+		</Login>
+
+		
+
+	</Execution>
+
+</Automation>

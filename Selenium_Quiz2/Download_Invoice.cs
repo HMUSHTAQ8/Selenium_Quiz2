@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -30,11 +31,11 @@ namespace Selenium_Quiz2
         By Ex_year = By.XPath("//*[@id=\"payment-form\"]/div[3]/div[3]/input");
         By pay_confirm = By.Id("submit");
         By Success_Message = By.XPath("//*[@id=\"form\"]/div/div/div/p");
+        By download_btn = By.XPath("//*[@id=\"form\"]/div/div/div/a");
         By Contin_btn = By.XPath("//*[@id=\"form\"]/div/div/div/div/a");
         public void download_invoice()
         {
-            url_function();
-            Verify_Homepage_Visibility();
+            //Verify_Homepage_Visibility();
             click(view_pr_btn);
             click(add_to_cart);
             Thread.Sleep(2000);
@@ -43,6 +44,7 @@ namespace Selenium_Quiz2
             Assert.AreEqual("Automation Exercise - Checkout", title);
             click(proceed_to_checkout);
             click(resgister_login);
+            Thread.Sleep(1000);
             Ruser1.RegisterUser();
             click(cart_btn);
             click(proceed_to_checkout);
@@ -65,11 +67,22 @@ namespace Selenium_Quiz2
             var succes_verify = driver.FindElement(Success_Message);
             string Actual_result2 = succes_verify.Text;
             Assert.AreEqual("Congratulations! Your order has been confirmed!", Actual_result2);
-            
 
+            verify_downloadinvoice();
         }
         public void verify_downloadinvoice()
         {
+            click(download_btn);
+            Thread.Sleep(2000);
+            var Path = "C:\\Users\\hmush\\Downloads\\invoice.txt";
+            string[] filePaths = Directory.GetFiles(Path);
+            bool result =filePaths.Contains("invoice.txt");
+            if (result == true)
+            {
+                Assert.IsTrue(true);
+            }
+
+            File.Delete("invoice.txt");
             click(Contin_btn);
         }
     }

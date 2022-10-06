@@ -25,6 +25,7 @@ namespace Selenium_Quiz2
         [TestMethod]
         public void place_ordercheckout()
         {
+            bc.url_function();
             porder.placeorder();
         }
     }

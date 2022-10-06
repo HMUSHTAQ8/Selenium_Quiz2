@@ -17,7 +17,6 @@ namespace Selenium_Quiz2
         By arrow_btn = By.Id("subscribe");
         public void Assert_subscriptiontext()
         {
-            url_function();
             Verify_Homepage_Visibility();
             ScrollToElement(Subtext);
             var verify_sub = driver.FindElement(Subtext);
@@ -26,6 +25,7 @@ namespace Selenium_Quiz2
         }
         public void verify_subcrib()
         {
+            url_function();
             Assert_subscriptiontext();
             type(email_field, "hmushtaq.inbox@gmail.com");
             click(arrow_btn);

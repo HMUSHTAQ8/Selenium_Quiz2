@@ -81,7 +81,7 @@ namespace Selenium_Quiz2
         {
             // Taking a full-screen screenshot
             Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-            screenshot.SaveAsFile(@"D:\Selenium_Projects\Selenium_Quiz2\Selenium_Quiz2\Reports\", ScreenshotImageFormat.Png);
+            screenshot.SaveAsFile(@"D:\Selenium_Projects\Selenium_Quiz2\Selenium_Quiz2\Reports\ScreenShot.Png", ScreenshotImageFormat.Png);
 
         }
         public void ScrollToTop()
