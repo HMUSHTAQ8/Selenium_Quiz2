@@ -25,6 +25,7 @@ namespace Selenium_Quiz2
         [TestMethod]
         public void Scrolldownandup()
         {
+            bc.url_function();
             TC.scrolldown_up_assert();
         }
     }

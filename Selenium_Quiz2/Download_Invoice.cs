@@ -74,7 +74,7 @@ namespace Selenium_Quiz2
         {
             click(download_btn);
             Thread.Sleep(2000);
-            var Path = "C:\\Users\\hmush\\Downloads\\invoice.txt";
+            var Path = @"C:\\Users\\hmush\\Downloads\\";
             string[] filePaths = Directory.GetFiles(Path);
             bool result =filePaths.Contains("invoice.txt");
             if (result == true)
