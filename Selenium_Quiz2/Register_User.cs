@@ -48,7 +48,7 @@ namespace Selenium_Quiz2
         public void ClickSignUp_Btn()
         {
             //Verify_Homepage_Visibility();
-            log.Info("Homepage is verify Successfully");
+            //log.Info("Homepage is verify Successfully");
 /*            driver.Url = "http://automationexercise.com";
             Assert.AreEqual("https://automationexercise.com/", driver.Url);*/
             bs1.click(Login_btn);
@@ -57,7 +57,7 @@ namespace Selenium_Quiz2
             string Actual_result = signup_verify.Text;
             Assert.AreEqual("New User Signup!", Actual_result);
             type(name, "Humayun Mushtaq");
-            type(Email, "hmushtaq.inbox22@gmail.com");
+            type(Email, "hmushtaq.inbox28@gmail.com");
             bs1.click(Signup_btn);
             TakeScreenShot();
         }
