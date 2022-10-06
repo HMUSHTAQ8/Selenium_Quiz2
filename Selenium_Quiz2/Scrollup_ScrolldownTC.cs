@@ -23,9 +23,9 @@ namespace Selenium_Quiz2
             //bc.driver.Close();
         }
         [TestMethod]
-        public void Scrolldown()
+        public void Scrolldownandup()
         {
-            TC.scrolldown_assert();
+            TC.scrolldown_up_assert();
         }
     }
 }

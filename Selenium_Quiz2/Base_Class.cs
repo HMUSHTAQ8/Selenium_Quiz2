@@ -84,6 +84,12 @@ namespace Selenium_Quiz2
             screenshot.SaveAsFile(@"D:\Selenium_Projects\Selenium_Quiz2\Selenium_Quiz2\Reports\", ScreenshotImageFormat.Png);
 
         }
+        public void ScrollToTop()
+        {
+            // Scroll Top
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollTo(0, document." + "head" + ".scrollHeight);");
+        }
 
 
     }
